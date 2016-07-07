@@ -773,15 +773,15 @@
 			sendFinish[2] = 13; //\r
 			device.send(sendFinish.buffer);
 		
-			device.close();
+		//	device.close();
 		}
-		if(poller)
-			poller = clearInterval(poller);
-		if(comPoller)
-			comPoller = clearInterval(comPoller);
-		if(comWatchdog)
-			comWatchdog = clearInterval(comWatchdog);
-		device = null;
+		//if(poller)
+		//	poller = clearInterval(poller);
+		//if(comPoller)
+		//	comPoller = clearInterval(comPoller);
+		//if(comWatchdog)
+		//	comWatchdog = clearInterval(comWatchdog);
+		//device = null;
 	}
 
 	ext._getStatus = function(){
