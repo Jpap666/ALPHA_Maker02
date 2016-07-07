@@ -791,7 +791,7 @@
 			return{status: 1, msg: 'Procurando'};
 		}
 		if(watchdog) {
-			console.log('Watchdog');
+			console.log('Watchdog deu verdadeiro');
 			return {status: 0, msg: 'Probing for PicoBoard'};
 		}
 		return{status: 2, msg: 'Conectado'};
