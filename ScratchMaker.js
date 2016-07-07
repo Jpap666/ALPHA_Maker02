@@ -786,9 +786,14 @@
 
 	ext._getStatus = function(){
 		console.log('Executando:_getStatus');
-		if(!device) return{status: 1, msg: 'Procurando'};
-		if(watchdog) return {status: 0, msg: 'Probing for PicoBoard'};
-	
+		if(!device) {
+			console.log('Sem disposito');
+			return{status: 1, msg: 'Procurando'};
+		}
+		if(watchdog) {
+			console.log('Watchdog');
+			return {status: 0, msg: 'Probing for PicoBoard'};
+		}
 		return{status: 2, msg: 'Conectado'};
 	}
 	
